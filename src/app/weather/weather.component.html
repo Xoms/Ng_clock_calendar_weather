@@ -1,0 +1,6 @@
+<div *ngIf="weatherService.response">
+  <p>Temperature: {{weatherService.response.main.temp - 273.15}}&#176; C</p>
+  <p>Humidity: {{weatherService.response.main.humidity}} %</p>
+  <p>Cloudiness: {{weatherService.response.weather[0].description}}</p>
+  <p>Sunrise: {{weatherService.response.sys.sunrise * 1000 | date:'shortTime'}}</p>
+</div>
